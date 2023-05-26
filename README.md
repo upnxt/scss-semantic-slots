@@ -2,6 +2,12 @@
 
 Semantic slots allow labeling of CSS property values with context friendly notation e.g. `slot.get("body.text.primary")`
 
+## Installation
+
+```
+npm install scss-semantic-slots --save-dev
+```
+
 ## Usage
 
 **theme.scss**
