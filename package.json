@@ -2,8 +2,12 @@
     "name": "scss-semantic-slots",
     "description": "Semantic slots allow labeling of CSS property values with context friendly notation e.g. slot.get('body.text.primary')",
     "version": "0.1.0",
-    "homepage": "https://www.github.com/upnxt/scss-semantic-slots",
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/upnxt/scss-semantic-slots"
+    },
     "license": "MIT",
+    "homepage": "https://www.upnxt.com",
     "author": "upnxt",
     "scripts": {},
     "devDependencies": {
