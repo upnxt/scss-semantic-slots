@@ -1,0 +1,26 @@
+@use "../scss-semantic-slots" as slot;
+
+$theme: (
+    body: (
+        background: #fff,
+        text:
+            (
+                primary: #000,
+                secondary: #ff0000,
+            ),
+        "border--width": 0.075em,
+        "border--style": "solid",
+        "border--color": #00ff00,
+    ),
+    link: (
+        primary: (
+            text: #0000ff,
+            hover: #4f4fff,
+            hover--alt: #f5ad39,
+        )
+    ),
+);
+
+@function get($key) {
+    @return slot.map-slots($theme, $key);
+}

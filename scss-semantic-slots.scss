@@ -1,0 +1,26 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+
+// map dot delimited string to object
+@function map-slots($dot-map, $element) {
+    @each $key in _slots($element) {
+        $dot-map: map.get($dot-map, $key);
+    }
+
+    @return $dot-map;
+}
+
+// recursively walk through dot notation
+@function _slots($dot-map, $list: []) {
+    $index: string.index($dot-map, ".");
+
+    @if ($index == null) {
+        @return list.append($list, $dot-map);
+    }
+
+    $slot: string.slice($dot-map, 1, $index - 1);
+    $next: string.slice($dot-map, $index + 1);
+
+    @return _slots($next, list.append($list, $slot));
+}
