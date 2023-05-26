@@ -7,7 +7,7 @@ Semantic slots allow labeling of CSS property values with context friendly notat
 **theme.scss**
 
 ```scss
-@use "scss-semantic-slots" as slot;
+@use "~scss-semantic-slots/index" as slot;
 
 $theme: (
     body: (
